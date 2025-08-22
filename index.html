@@ -7,38 +7,79 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #FDECEF, #FFD6D6); /* تدرج وردي/مشمشي */
+            color: #2D2D2D; /* رمادي غامق للنصوص */
             padding: 20px;
             direction: rtl;
+            position: relative;
+            overflow-x: hidden;
+            text-align: center; /* جعل النصوص بالوسط */
         }
+
+        /* عناصر زخرفية */
+        body::before, body::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        body::before {
+            width: 300px;
+            height: 300px;
+            background: #F08A9B;
+            top: -50px;
+            right: -80px;
+        }
+        body::after {
+            width: 400px;
+            height: 400px;
+            background: #C06C84;
+            bottom: -100px;
+            left: -100px;
+        }
+
         h1, h2 {
-            color: #0056b3;
+            color: #C06C84;
+            position: relative;
+            z-index: 1;
         }
         h1 {
-            text-align: center;
             margin-bottom: 30px;
+            font-size: 28px;
         }
         hr {
             border: none;
-            border-top: 2px solid #ddd;
-            margin: 20px 0;
+            border-top: 2px solid #F08A9B;
+            margin: 20px auto;
+            width: 80%;
         }
         ol {
             margin-bottom: 20px;
+            display: inline-block; /* عشان ما يمتد للقارئ */
+            text-align: right; /* القوائم تبقى يمين */
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .section {
-            margin-bottom: 30px;
+            margin: 0 auto 30px auto;
+            background-color: #FFF5F7;
+            padding: 18px;
+            border-radius: 14px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 1;
+            width: 85%;
+            max-width: 800px;
         }
         .footer {
-            text-align: center;
             font-size: 0.9em;
             margin-top: 50px;
-            color: #666;
+            color: #C06C84;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
